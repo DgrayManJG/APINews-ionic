@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\Ionic\\APINews\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\icon.png",
+        "source": "D:\\Ionic\\APINews\\platforms\\android\\res\\mipmap-hdpi\\icon.png"
+    },
+    {
+        "merged": "D:\\Ionic\\family-snap\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\icon.png",
+        "source": "D:\\Ionic\\family-snap\\platforms\\android\\res\\mipmap-hdpi\\icon.png"
+    }
+]
