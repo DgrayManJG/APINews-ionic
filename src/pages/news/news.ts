@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
-import { NewsApiGlobal } from '../../models/newsapi-global.model';
+import { NewsApiGlobalArticle } from '../../models/newsapi-globalarticle.model';
 import { NewsApiService } from '../../services/newsapi.service';
 
 @Component({
@@ -10,14 +10,10 @@ import { NewsApiService } from '../../services/newsapi.service';
 })
 export class NewsPage {
 
-  news: NewsApiGlobal = new NewsApiGlobal();
+  news: NewsApiGlobalArticle = new NewsApiGlobalArticle();
 
-  constructor(public navCtrl: NavController, private newsApiService: NewsApiService) {
-    this.newsApiService.getArticles()
-    .then(newsFetched => { 
-      this.news = newsFetched,
-      console.log(this.news);
-    });
+  constructor(public navCtrl: NavController, private NavParams: NavParams) {
+    this.news = NavParams.get('news'); 
   }
   
 }

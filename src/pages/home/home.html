@@ -10,6 +10,10 @@
 
   <h1>Application de test qui va recenser les news de plusieurs sites connus à travers leur API. Enjoy!</h1>
 
-  <img>
+  <ion-list inset>
+    <button ion-item *ngFor="let source of sources.sources" (click)="articleBySource(source.id, source.sortBysAvailable[0])">
+      {{ source.name }}
+    </button>  
+  </ion-list>
 
 </ion-content>

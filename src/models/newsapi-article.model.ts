@@ -1,4 +1,4 @@
-export class NewApiArticle {
+export class NewsApiArticle {
 
     author: string;
     description: string;

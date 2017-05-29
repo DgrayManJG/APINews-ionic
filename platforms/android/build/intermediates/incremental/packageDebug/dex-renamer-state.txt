@@ -1,4 +1,4 @@
-#Sun May 28 20:07:42 CEST 2017
+#Mon May 29 19:59:39 CEST 2017
 base.0=D\:\\Ionic\\APINews\\platforms\\android\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=D\:\\Ionic\\APINews\\platforms\\android\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
