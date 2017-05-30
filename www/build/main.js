@@ -55766,7 +55766,7 @@ var AboutPage = (function () {
 }());
 AboutPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-about',template:/*ion-inline-start:"D:\Ionic\APINews\src\pages\about\about.html"*/'<!--\n  Generated template for the AboutPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>about</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  \n  <ion-item>\n    <ion-label color="primary" floating>Prénom</ion-label>\n    <ion-input [(ngModel)]="prenom"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label color="primary" floating>Nom</ion-label>\n    <ion-input [(ngModel)]="nom"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-input id="homeNumber" type="number" placeholder="Age" [(ngModel)]="age"></ion-input>\n  </ion-item>\n\n  <button id="homeButton" ion-button (tap)="showDetails()">Se présenter</button>\n  \n</ion-content>\n'/*ion-inline-end:"D:\Ionic\APINews\src\pages\about\about.html"*/
+        selector: 'page-about',template:/*ion-inline-start:"D:\Ionic\APINews\src\pages\about\about.html"*/'<!--\n  Generated template for the AboutPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>about</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <h1>Application de test qui va recenser les news de plusieurs sites connus à travers leur API. Enjoy!</h1>\n  \n  <ion-item>\n    <ion-label color="primary" floating>Prénom</ion-label>\n    <ion-input [(ngModel)]="prenom"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label color="primary" floating>Nom</ion-label>\n    <ion-input [(ngModel)]="nom"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-input id="homeNumber" type="number" placeholder="Age" [(ngModel)]="age"></ion-input>\n  </ion-item>\n\n  <button id="homeButton" ion-button (tap)="showDetails()">Se présenter</button>\n  \n</ion-content>\n'/*ion-inline-end:"D:\Ionic\APINews\src\pages\about\about.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
 ], AboutPage);
@@ -55846,34 +55846,44 @@ var HomePage = (function () {
         this.loadingCtrl = loadingCtrl;
         this.sources = new __WEBPACK_IMPORTED_MODULE_4__models_newsapi_globalsource_model__["a" /* NewsApiGlobalSource */]();
         this.news = new __WEBPACK_IMPORTED_MODULE_3__models_newsapi_globalarticle_model__["a" /* NewsApiGlobalArticle */]();
-        this.newsApiService.getSources()
-            .then(function (sourcesFetched) {
-            _this.sources = sourcesFetched,
-                console.log(_this.sources);
+        var loader = this.loadingCtrl.create({
+            content: "Please wait...",
+            duration: 1000
         });
+        loader.present();
+        setTimeout(function () {
+            _this.newsApiService.getSources()
+                .then(function (sourcesFetched) {
+                _this.sources = sourcesFetched;
+            });
+            loader.dismiss();
+        }, 1000);
     }
     HomePage.prototype.articleBySource = function (id, sortBy) {
         var _this = this;
         var loader = this.loadingCtrl.create({
             content: "Please wait...",
-            duration: 2000
+            duration: 1000
         });
         loader.present();
         this.newsApiService.source = id;
         this.newsApiService.sortBy = sortBy;
-        this.newsApiService.getArticles()
-            .then(function (newsFetched) {
-            _this.news = newsFetched,
-                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__news_news__["a" /* NewsPage */], {
-                    news: _this.news,
-                });
-        });
+        setTimeout(function () {
+            _this.newsApiService.getArticles()
+                .then(function (newsFetched) {
+                _this.news = newsFetched,
+                    _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__news_news__["a" /* NewsPage */], {
+                        news: _this.news,
+                    });
+            });
+            loader.dismiss();
+        }, 1000);
     };
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"D:\Ionic\APINews\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Home\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <h1>Application de test qui va recenser les news de plusieurs sites connus à travers leur API. Enjoy!</h1>\n\n  <ion-list inset>\n    <button ion-item *ngFor="let source of sources.sources" (click)="articleBySource(source.id, source.sortBysAvailable[0])">\n      {{ source.name }}\n    </button>  \n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"D:\Ionic\APINews\src\pages\home\home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"D:\Ionic\APINews\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Home\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <ion-fab top right edge>\n    <button ion-fab mini><ion-icon name="add"></ion-icon></button>\n    <ion-fab-list>\n      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>\n      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>\n      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>\n      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>\n    </ion-fab-list>\n  </ion-fab>\n\n  <ion-list inset>\n    <button ion-item *ngFor="let source of sources.sources" (click)="articleBySource(source.id, source.sortBysAvailable[0])">\n      {{ source.name }}\n      <ion-icon ios="ios-arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n    </button>  \n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"D:\Ionic\APINews\src\pages\home\home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_5__services_newsapi_service__["a" /* NewsApiService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
 ], HomePage);
@@ -55912,7 +55922,7 @@ var NewsPage = (function () {
 }());
 NewsPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-news',template:/*ion-inline-start:"D:\Ionic\APINews\src\pages\news\news.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      News\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <h2 padding>News</h2>\n\n  <ion-card *ngFor="let article of news.articles">\n\n  <img [src]="article.urlToImage"/>\n\n  <ion-card-content>\n\n    <ion-card-title>\n\n      {{ article.title }}\n\n      </ion-card-title>\n\n    <p>\n\n      {{ article.description }}<a [href]="article.url"> lire la suite de l\'article <ion-icon ios="ios-link" md="md-link"></ion-icon></a>\n\n    </p>\n\n  </ion-card-content>\n\n  \n\n</ion-card>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Ionic\APINews\src\pages\news\news.html"*/
+        selector: 'page-news',template:/*ion-inline-start:"D:\Ionic\APINews\src\pages\news\news.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      News\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <h2 padding>{{ news.source }}</h2>\n\n  <ion-card *ngFor="let article of news.articles">\n\n  <img [src]="article.urlToImage"/>\n\n  <ion-card-content>\n\n    <ion-card-title>\n\n      {{ article.title }}\n\n      </ion-card-title>\n\n    <p>\n\n      {{ article.description }}<a [href]="article.url"> lire la suite de l\'article <ion-icon ios="ios-link" md="md-link"></ion-icon></a>\n\n    </p>\n\n  </ion-card-content>\n\n  \n\n</ion-card>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Ionic\APINews\src\pages\news\news.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
 ], NewsPage);

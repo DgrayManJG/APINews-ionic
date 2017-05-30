@@ -8,11 +8,20 @@
 
 <ion-content padding>
 
-  <h1>Application de test qui va recenser les news de plusieurs sites connus à travers leur API. Enjoy!</h1>
+  <ion-fab top right edge>
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list>
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
 
   <ion-list inset>
     <button ion-item *ngFor="let source of sources.sources" (click)="articleBySource(source.id, source.sortBysAvailable[0])">
       {{ source.name }}
+      <ion-icon ios="ios-arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>
     </button>  
   </ion-list>
 

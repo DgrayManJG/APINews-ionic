@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <h2 padding>News</h2>
+  <h2 padding>{{ news.source }}</h2>
   <ion-card *ngFor="let article of news.articles">
   <img [src]="article.urlToImage"/>
   <ion-card-content>
