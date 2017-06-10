@@ -35313,7 +35313,7 @@ if (!exports.root) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_alert_alert__ = __webpack_require__(51);
 /* unused harmony reexport Alert */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_alert_alert_controller__ = __webpack_require__(112);
-/* unused harmony reexport AlertController */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_6__components_alert_alert_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_alert_alert_component__ = __webpack_require__(50);
 /* unused harmony reexport AlertCmp */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_app_app__ = __webpack_require__(6);
@@ -35391,7 +35391,7 @@ if (!exports.root) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__components_loading_loading__ = __webpack_require__(137);
 /* unused harmony reexport Loading */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__components_loading_loading_controller__ = __webpack_require__(136);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_45__components_loading_loading_controller__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_45__components_loading_loading_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__components_loading_loading_component__ = __webpack_require__(64);
 /* unused harmony reexport LoadingCmp */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__components_menu_menu__ = __webpack_require__(140);
@@ -35526,7 +35526,7 @@ if (!exports.root) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_110__platform_dom_controller__ = __webpack_require__(8);
 /* unused harmony reexport DomController */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_111__platform_platform__ = __webpack_require__(3);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_111__platform_platform__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_111__platform_platform__["a"]; });
 /* unused harmony reexport setupPlatform */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_112__tap_click_haptic__ = __webpack_require__(36);
 /* unused harmony reexport Haptic */
@@ -35539,7 +35539,7 @@ if (!exports.root) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_116__navigation_nav_controller_base__ = __webpack_require__(45);
 /* unused harmony reexport NavControllerBase */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_117__navigation_nav_params__ = __webpack_require__(15);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_117__navigation_nav_params__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_117__navigation_nav_params__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_118__navigation_nav_util__ = __webpack_require__(21);
 /* unused harmony reexport DeepLinkMetadata */
 /* unused harmony reexport DeepLinkMetadataFactory */
@@ -55806,7 +55806,7 @@ DetailsPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-details',template:/*ion-inline-start:"D:\Ionic\APINews-ionic\src\pages\details\details.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Details\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div *ngIf="prenom && nom && age" id="panel-infos">\n\n    <h4>Bonjour {{ prenom }}</h4>\n\n    <h5>Votre nom : {{ nom }}</h5>\n\n    <p>Vous avez {{ age }} ans !</p>\n\n\n\n    <p>Vous êtes {{ (age < 18) ? \'mineur\' : \'majeur\' }} !</p>\n\n  </div>\n\n\n\n  <div *ngIf="!prenom || !nom || !age" id="panel-error">\n\n    <h4>Il manque une ou plusieurs données !</h4>\n\n  </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Ionic\APINews-ionic\src\pages\details\details.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], DetailsPage);
 
 //# sourceMappingURL=details.js.map
@@ -55885,7 +55885,7 @@ HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-home',template:/*ion-inline-start:"D:\Ionic\APINews-ionic\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Home\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <ion-fab top right edge>\n\n    <button ion-fab mini><ion-icon name="add"></ion-icon></button>\n\n    <ion-fab-list>\n\n      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>\n\n      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>\n\n      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>\n\n      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>\n\n    </ion-fab-list>\n\n  </ion-fab>\n\n\n\n  <ion-list inset>\n\n    <button ion-item *ngFor="let source of sources.sources" (click)="articleBySource(source.id, source.sortBysAvailable[0])">\n\n      {{ source.name }}\n\n      <ion-icon ios="ios-arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n\n    </button>  \n\n  </ion-list>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Ionic\APINews-ionic\src\pages\home\home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_5__services_newsapi_service__["a" /* NewsApiService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_5__services_newsapi_service__["a" /* NewsApiService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
 ], HomePage);
 
 //# sourceMappingURL=home.js.map
@@ -55924,7 +55924,7 @@ NewsPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-news',template:/*ion-inline-start:"D:\Ionic\APINews-ionic\src\pages\news\news.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      News\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <h2 padding>{{ news.source }}</h2>\n\n  <ion-card *ngFor="let article of news.articles">\n\n  <img [src]="article.urlToImage"/>\n\n  <ion-card-content>\n\n    <ion-card-title>\n\n      {{ article.title }}\n\n      </ion-card-title>\n\n    <p>\n\n      {{ article.description }}<a [href]="article.url"> lire la suite de l\'article <ion-icon ios="ios-link" md="md-link"></ion-icon></a>\n\n    </p>\n\n  </ion-card-content>\n\n  \n\n</ion-card>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Ionic\APINews-ionic\src\pages\news\news.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], NewsPage);
 
 //# sourceMappingURL=news.js.map
@@ -55937,6 +55937,8 @@ NewsPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__about_about__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__native_storage_native_storage__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sqlite_sqlite__ = __webpack_require__(273);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -55950,15 +55952,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var TabsPage = (function () {
     function TabsPage() {
         this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */];
         this.tab2Root = __WEBPACK_IMPORTED_MODULE_1__about_about__["a" /* AboutPage */];
+        this.tab3Root = __WEBPACK_IMPORTED_MODULE_3__native_storage_native_storage__["a" /* NativeStoragePage */];
+        this.tab4Root = __WEBPACK_IMPORTED_MODULE_4__sqlite_sqlite__["a" /* SqlitePage */];
     }
     return TabsPage;
 }());
 TabsPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"D:\Ionic\APINews-ionic\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"D:\Ionic\APINews-ionic\src\pages\tabs\tabs.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"D:\Ionic\APINews-ionic\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="native Storage" tabIcon="information-circle"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle="Sqlite" tabIcon="information-circle"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"D:\Ionic\APINews-ionic\src\pages\tabs\tabs.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);
@@ -76892,9 +76898,12 @@ webpackEmptyContext.id = 200;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_about_about__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_details_details__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_news_news__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_tabs_tabs__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_http__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_newsapi_service__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_native_storage_native_storage__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_sqlite_sqlite__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_tabs_tabs__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_http__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_newsapi_service__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_native_native_storage__ = __webpack_require__(272);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -76914,8 +76923,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 //services
 
+
+// Native components
 
 var AppModule = (function () {
     function AppModule() {
@@ -76930,10 +76943,12 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__pages_about_about__["a" /* AboutPage */],
             __WEBPACK_IMPORTED_MODULE_8__pages_details_details__["a" /* DetailsPage */],
             __WEBPACK_IMPORTED_MODULE_9__pages_news_news__["a" /* NewsPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_tabs_tabs__["a" /* TabsPage */]
+            __WEBPACK_IMPORTED_MODULE_10__pages_native_storage_native_storage__["a" /* NativeStoragePage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_sqlite_sqlite__["a" /* SqlitePage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_tabs_tabs__["a" /* TabsPage */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_11__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_13__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */])
         ],
@@ -76944,10 +76959,13 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__pages_about_about__["a" /* AboutPage */],
             __WEBPACK_IMPORTED_MODULE_8__pages_details_details__["a" /* DetailsPage */],
             __WEBPACK_IMPORTED_MODULE_9__pages_news_news__["a" /* NewsPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_tabs_tabs__["a" /* TabsPage */]
+            __WEBPACK_IMPORTED_MODULE_10__pages_native_storage_native_storage__["a" /* NativeStoragePage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_sqlite_sqlite__["a" /* SqlitePage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_tabs_tabs__["a" /* TabsPage */]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_12__services_newsapi_service__["a" /* NewsApiService */],
+            __WEBPACK_IMPORTED_MODULE_14__services_newsapi_service__["a" /* NewsApiService */],
+            __WEBPACK_IMPORTED_MODULE_15__ionic_native_native_storage__["a" /* NativeStorage */],
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
             { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
@@ -77183,7 +77201,7 @@ var MyApp = (function () {
 MyApp = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"D:\Ionic\APINews-ionic\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"D:\Ionic\APINews-ionic\src\app\app.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
 
 //# sourceMappingURL=app.component.js.map
@@ -114574,6 +114592,245 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map
+
+/***/ }),
+/* 271 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__ = __webpack_require__(272);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NativeStoragePage; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+// native component
+
+var NativeStoragePage = (function () {
+    function NativeStoragePage(navCtrl, alertCtrl, nativeStorage) {
+        this.navCtrl = navCtrl;
+        this.alertCtrl = alertCtrl;
+        this.nativeStorage = nativeStorage;
+    }
+    NativeStoragePage.prototype.storeIdentity = function () {
+        var _this = this;
+        this.nativeStorage.setItem('my-identity-card', {
+            name: this.name,
+            surname: this.surname,
+            years: this.years
+        })
+            .then(function () {
+            var alert = _this.alertCtrl.create({
+                title: 'Card saved !',
+                subTitle: 'Your identity it\'s save on native storage!',
+                buttons: ['OK']
+            });
+            alert.present();
+        }, function (error) { return console.error('Error storing item', error); });
+    };
+    NativeStoragePage.prototype.getMyIndentity = function () {
+        var _this = this;
+        this.nativeStorage.getItem('my-identity-card')
+            .then(function (data) {
+            _this.name = data.name;
+            _this.surname = data.surname;
+            _this.years = data.years;
+        }, function (error) { return console.error(error); });
+    };
+    return NativeStoragePage;
+}());
+NativeStoragePage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+        selector: 'page-native-storage',template:/*ion-inline-start:"D:\Ionic\APINews-ionic\src\pages\native-storage\native-storage.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>\n\n            Native storage\n\n        </ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n    <p>Ce formulaire va stocker des données dans l\'espace mémoire du téléphone.\n\n        <p>\n\n\n\n            <ion-list>\n\n\n\n                <ion-item>\n\n                    <ion-label fixed>Name</ion-label>\n\n                    <ion-input type="text" [(ngModel)]="name"></ion-input>\n\n                </ion-item>\n\n\n\n                <ion-item>\n\n                    <ion-label fixed>Surname</ion-label>\n\n                    <ion-input type="text" [(ngModel)]="surname"></ion-input>\n\n                </ion-item>\n\n\n\n                <ion-item>\n\n                    <ion-label fixed>Years</ion-label>\n\n                    <ion-input type="text" [(ngModel)]="years"></ion-input>\n\n                </ion-item>\n\n\n\n            </ion-list>\n\n\n\n            <div padding>\n\n                <button block (tap)="storeIdentity()">Save my Card</button>\n\n                <button block (tap)="getMyIndentity()">What\'s my identity ?</button>\n\n            </div>\n\n\n\n</ion-content>'/*ion-inline-end:"D:\Ionic\APINews-ionic\src\pages\native-storage\native-storage.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */]])
+], NativeStoragePage);
+
+//# sourceMappingURL=native-storage.js.map
+
+/***/ }),
+/* 272 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(107);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NativeStorage; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * @name Native Storage
+ * @description Native storage of variables in Android and iOS
+ *
+ * @usage
+ * ```typescript
+ * import { NativeStorage } from '@ionic-native/native-storage';
+ *
+ * constructor(private nativeStorage: NativeStorage) { }
+ *
+ * ...
+ *
+ * this.nativeStorage.setItem('myitem', {property: 'value', anotherProperty: 'anotherValue'})
+ *   .then(
+ *     () => console.log('Stored item!'),
+ *     error => console.error('Error storing item', error)
+ *   );
+ *
+ * this.nativeStorage.getItem('myitem')
+ *   .then(
+ *     data => console.log(data),
+ *     error => console.error(error)
+ *   );
+ * ```
+ */
+var NativeStorage = (function (_super) {
+    __extends(NativeStorage, _super);
+    function NativeStorage() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * Stores a value
+     * @param reference {string}
+     * @param value
+     * @returns {Promise<any>}
+     */
+    NativeStorage.prototype.setItem = function (reference, value) { return; };
+    /**
+     * Gets a stored item
+     * @param reference {string}
+     * @returns {Promise<any>}
+     */
+    NativeStorage.prototype.getItem = function (reference) { return; };
+    /**
+     * Retrieving all keys
+     * @returns {Promise<any>}
+     */
+    NativeStorage.prototype.keys = function () { return; };
+    /**
+     * Removes a single stored item
+     * @param reference {string}
+     * @returns {Promise<any>}
+     */
+    NativeStorage.prototype.remove = function (reference) { return; };
+    /**
+     * Removes all stored values.
+     * @returns {Promise<any>}
+     */
+    NativeStorage.prototype.clear = function () { return; };
+    return NativeStorage;
+}(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* IonicNativePlugin */]));
+NativeStorage.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Injectable */] },
+];
+/** @nocollapse */
+NativeStorage.ctorParameters = function () { return []; };
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["b" /* Cordova */])(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, Object]),
+    __metadata("design:returntype", Promise)
+], NativeStorage.prototype, "setItem", null);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["b" /* Cordova */])(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], NativeStorage.prototype, "getItem", null);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["b" /* Cordova */])(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], NativeStorage.prototype, "keys", null);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["b" /* Cordova */])(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], NativeStorage.prototype, "remove", null);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["b" /* Cordova */])(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], NativeStorage.prototype, "clear", null);
+NativeStorage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["c" /* Plugin */])({
+        pluginName: 'NativeStorage',
+        plugin: 'cordova-plugin-nativestorage',
+        pluginRef: 'NativeStorage',
+        repo: 'https://github.com/TheCocoaProject/cordova-plugin-nativestorage',
+        platforms: ['Android', 'Browser', 'iOS', 'macOS', 'Windows']
+    })
+], NativeStorage);
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 273 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SqlitePage; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var SqlitePage = (function () {
+    function SqlitePage(navCtrl, alertCtrl) {
+        this.navCtrl = navCtrl;
+        this.alertCtrl = alertCtrl;
+    }
+    return SqlitePage;
+}());
+SqlitePage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+        selector: 'page-sqlite',template:/*ion-inline-start:"D:\Ionic\APINews-ionic\src\pages\sqlite\sqlite.html"*/''/*ion-inline-end:"D:\Ionic\APINews-ionic\src\pages\sqlite\sqlite.html"*/
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* AlertController */]) === "function" && _b || Object])
+], SqlitePage);
+
+var _a, _b;
+//# sourceMappingURL=sqlite.js.map
 
 /***/ })
 /******/ ]);

@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Native storage
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <p>Ce formulaire va stocker des données dans l'espace mémoire du téléphone.
+        <p>
+
+            <ion-list>
+
+                <ion-item>
+                    <ion-label fixed>Name</ion-label>
+                    <ion-input type="text" [(ngModel)]="name"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label fixed>Surname</ion-label>
+                    <ion-input type="text" [(ngModel)]="surname"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label fixed>Years</ion-label>
+                    <ion-input type="text" [(ngModel)]="years"></ion-input>
+                </ion-item>
+
+            </ion-list>
+
+            <div padding>
+                <button block (tap)="storeIdentity()">Save my Card</button>
+                <button block (tap)="getMyIndentity()">What's my identity ?</button>
+            </div>
+
+</ion-content>

@@ -11,11 +11,16 @@ import { HomePage } from '../pages/home/home';
 import { AboutPage } from '../pages/about/about';
 import { DetailsPage } from '../pages/details/details';
 import { NewsPage } from '../pages/news/news';
+import { NativeStoragePage } from '../pages/native-storage/native-storage';
+import { SqlitePage } from '../pages/sqlite/sqlite';
 import { TabsPage } from '../pages/tabs/tabs';
 
 //services
 import { HttpModule } from "@angular/http";
 import { NewsApiService } from '../services/newsapi.service';
+
+// Native components
+import { NativeStorage } from '@ionic-native/native-storage';
 
 
 @NgModule({
@@ -25,6 +30,8 @@ import { NewsApiService } from '../services/newsapi.service';
     AboutPage,
     DetailsPage,
     NewsPage,
+    NativeStoragePage,
+    SqlitePage,
     TabsPage
   ],
   imports: [
@@ -39,10 +46,13 @@ import { NewsApiService } from '../services/newsapi.service';
     AboutPage,
     DetailsPage,
     NewsPage,
+    NativeStoragePage,
+    SqlitePage,
     TabsPage  
   ],
   providers: [
     NewsApiService,
+    NativeStorage,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

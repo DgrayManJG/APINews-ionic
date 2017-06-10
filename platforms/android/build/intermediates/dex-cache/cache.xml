@@ -3,12 +3,12 @@
 
     <item
         is-multidex="false"
-        jar="D:\Ionic\APINews-ionic\platforms\android\build\intermediates\exploded-aar\org.apache.cordova\CordovaLib\6.2.3\release\jars\classes.jar"
+        jar="D:\Ionic\APINews-ionic\platforms\android\build\intermediates\exploded-aar\org.apache.cordova\CordovaLib\6.2.3\debug\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
-        sha1="69c20ef9399dbf427537ee0c9a5ebb29ed5aa6c6">
-        <dex dex="D:\Ionic\APINews-ionic\platforms\android\build\intermediates\pre-dexed\release\CordovaLib-6.2.3-release_c6cfda6be066db16201d998bd3d7c3776c9fb31b.jar" />
+        sha1="7a1530ac850543228ac856fe951d258efe29f918">
+        <dex dex="D:\Ionic\APINews-ionic\platforms\android\build\intermediates\pre-dexed\debug\CordovaLib-6.2.3-debug_b4276ed23d6bd04c3b009d1e05b8c3905a0eb93d.jar" />
     </item>
 
 </items>

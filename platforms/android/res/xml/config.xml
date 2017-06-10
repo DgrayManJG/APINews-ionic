@@ -23,6 +23,9 @@
         <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="NativeStorage">
+        <param name="android-package" value="NativeStorage" />
+    </feature>
     <name>HeyHo! News</name>
     <description>Application de test qui va recenser les news de plusieurs sites connus à travers leur API.</description>
     <author email="jimmygue@hotmail.fr" href="http://ionicframework.com/">Jimmy GUEVEL</author>
