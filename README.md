@@ -1,4 +1,4 @@
-## App de news sur plusieurs site via leur API
+## Application hybride (android, IOS) de news sur plusieurs site via leur API
 
 Documentations des API Utiliser
 
